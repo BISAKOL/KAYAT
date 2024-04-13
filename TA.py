@@ -1,6 +1,11 @@
-import os, sys 
+import os
+import sys 
+import importlib
+
 os.system("git pull")
+
 try:
-_import_("TA").Spy() 
+    importlib.import_module("TA").Spy() 
 except Exception as e: 
-exit(str(e))
+    exit(str(e))
+
